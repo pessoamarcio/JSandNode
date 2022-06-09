@@ -1,0 +1,30 @@
+< ! doctype HTML>
+<html lang = "pt-br">
+	<head>
+		<meta charset = "utf-8">
+		<title> Algoritomo e Lógica de programação</title>
+	</head>
+	<boddy>
+		<h2>Programando JavaScript<h2>
+		<script>
+		
+		//aqui vai ficar o código de JS
+		
+		var idade = window.prompt("Quantos anos você tem? <br>");
+        if (idade < 16){
+            document.write("Menor de idade e não vota.");
+        } else {
+            if(idade >= 16 && idade < 18){
+                document.write("Menor de idade, voto opcional");
+            }else{
+                if(idade => 18 && idade <= 67){
+                    document.write("Maior de idade, voto obrigatorio.");
+                } else if(idade > 67){     //poderia ser usado o if normal. Mas o else if é outra forma reduzida.
+                    document.write("Maior de idade e voto opcional.");
+                };
+            };
+        };		
+		//Fim do script
+		</script>
+	</boddy>
+</html>

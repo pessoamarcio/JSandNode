@@ -1,0 +1,67 @@
+< ! doctype HTML>
+<html lang = "pt-br">
+	<head>
+		<meta charset = "utf-8">
+		<title> Algoritomo e Lógica de programação</title>
+	</head>
+	<boddy>
+		<h2>Programando JavaScript<h2>
+		<script>
+    /*Programa para registrar a temperatura de 365 dias, calcular a media,
+    mostrar os registros e mostrar quantas temperaturas maiores que 30*/
+
+	function Temp (diarias){
+    for(x=0; x<=diarias.length-1 ; x++){
+            diarias[x] = parseInt(window.prompt("Informe a temperatura: ")) //entrada usuario
+        };
+        return diarias;
+    };
+    
+    //calcular media das temperaturas
+    function CalcularMedia(diarias){
+        Med = 0;
+        x=0;
+        while (x <= diarias.length-1){
+            Med = Med + diarias[x];
+            x=x+1;
+        };
+        Med = Med/diarias.length;
+        document.write("A media das temperaturas é: " + Med + "<p>");
+    };
+    
+    //descobrir quantas temperaturas maiores que 30
+    function MaiorQ30(diarias){
+        Maior30 = 0;
+        x=0;
+        do {
+            if(diarias[x] > 30) {
+                Maior30 = Maior30 + 1;
+            }
+            x++;
+        } while(x <= diarias.length-1);
+        return Maior30;
+    }
+    
+    //mostra os registros de temperatura
+    function regisystem (diarias) {
+        document.write("AS temperaturas registradas foram: " + diarias + "<p>");
+    }
+    
+    Registros = new Array(365); //365 dias do ano
+    Registros = Temp(Registros);
+    regisystem(Registros);
+    CalcularMedia(Registros);
+    Maiorque30 = MaiorQ30(Registros);
+    document.write("As temperaturas maiores que 30 são: " + Maiorque30 + "<p>");
+
+    //Maior e menor temperatuda do mês
+    Maxima = Math.max.apply(Math, diarias);
+    Minima = Math.min.apply(Math, diarias);
+    document.write("A Maior temperatura do mês foi: " + Maxima + "<p>");
+    document.write("A menor temperatura do mês foi: " + Minima + "<p>");
+		
+		
+		//Fim do script
+		</script>
+	</boddy>
+</html>
